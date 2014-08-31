@@ -1,1 +1,39 @@
 <h1>Home</h1>
+
+<div id="bio">
+  Where I came from:
+I am classically trained as an academic scientist. I received a PhD in Molecular and Medical Genetics, and a Masters of Clinical Research from Oregon Health & Science University. My thesis work concerned the genetic origins of congential heart defects (the most common form of live birth defect, affecting 1/100 births), specifically Atrioventricular Septal Defects. 
+
+I have substantial experience working with both mouse models and human populations. My technical expertise includes experience with cell culture, histology, microscopy, light bioinformatic work, PCR (waaaay too much PCR experience), Western blotting, microarrays, immunohistochemistry, and tissue culture.
+
+
+Where I am:
+In 2011, I traded the Oregon rain for the sunshine of the Silicon Valley to take a Postdoc position at Stanford. However, I have since left academia to seek my fortunes elsewhere. I am now a freelance writer, biology instructor, and communications tutor. I am passionate about research, science education, and academic reform. 
+
+
+Where I am going:
+I am continually working to develop my writing and communications skills, while staying loyal to my first love -- science. I am learning how to network, and love the online science communities I have found, such as those at BitesizeBio. Please find me on my blog, Twitter, LinkedIn, or Facebook. I love making new science friends
+
+
+Interesting non-science things about me:
+Awarded public speaker
+Married to my high school sweetheart
+Marathon runner
+Avid knitter
+Mom
+</div>
+<div id="articles_col">
+  <% if @featured_articles.present? %>
+    <h2>Featured Work</h2>
+    <ul>
+      <% @featured_articles.each do |article| %>
+        <li class="featured_article">
+          <%= article.short_title %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+<%= link_to "Science Articles", science_articles_path %>
+<%= link_to "Social Articles", social_articles_path %>
+<%= link_to "New Article", new_article_path %>

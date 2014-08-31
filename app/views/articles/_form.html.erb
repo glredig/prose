@@ -1,0 +1,9 @@
+<%= simple_form_for @article do |f| %>
+  <%= f.input :title %>
+  <%= f.input :short_title %>
+  <%= f.input :featured, as: :boolean %>
+  <%= f.input :link %>
+  <%= f.input :category, collection: Article::CATEGORIES, include_blank: false %>
+
+  <%= f.button :submit %>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>Articles</h1>
+
+<% @articles.each do |article| %>
+  <%= article.title %><br>
+  <%= article.short_title %><br>
+  <%= article.featured %><br>
+  <%= Article::CATEGORIES[article.category] %><br>
+  <%= article.link %><br>
+<% end %>
