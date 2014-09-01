@@ -6,4 +6,7 @@
   <%= article.featured %><br>
   <%= Article::CATEGORIES[article.category] %><br>
   <%= article.link %><br>
+  <%= article.content %><br>
+  <%= image_tag article.article_image.thumb %>
+
 <% end %>

@@ -16,6 +16,8 @@ cancel_user_registration GET    /users/cancel(.:format)        devise/registrati
                          DELETE /users(.:format)               devise/registrations#destroy
               home_index GET    /home/index(.:format)          home#index
         science_articles GET    /science-articles(.:format)    science_articles#index
+         social_articles GET    /social-articles(.:format)     social_articles#index
+       featured_articles GET    /featured-articles(.:format)   featured_articles#index
                     root GET    /                              home#index
                 articles GET    /articles(.:format)            articles#index
                          POST   /articles(.:format)            articles#create

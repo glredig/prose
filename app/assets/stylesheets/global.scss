@@ -2,9 +2,32 @@
   padding: 0;
   margin: 0;
   font-family: 'Droid Serif', serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #555;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p {
+  text-indent: 1em;
 }
 
 #content {
   width: 1024px;
   margin: 0 auto;
+}
+
+.clear {
+  clear: both;
 }

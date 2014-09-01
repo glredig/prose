@@ -1,37 +1,42 @@
 <h1>Home</h1>
 
 <div id="bio">
-  Where I came from:
-I am classically trained as an academic scientist. I received a PhD in Molecular and Medical Genetics, and a Masters of Clinical Research from Oregon Health & Science University. My thesis work concerned the genetic origins of congential heart defects (the most common form of live birth defect, affecting 1/100 births), specifically Atrioventricular Septal Defects. 
+  <h2>Jennifer Redig, MCR, PhD</h2>
 
-I have substantial experience working with both mouse models and human populations. My technical expertise includes experience with cell culture, histology, microscopy, light bioinformatic work, PCR (waaaay too much PCR experience), Western blotting, microarrays, immunohistochemistry, and tissue culture.
+  <h4>Molecular Biologists Turned Writer</h4>
 
+  <p>
+    I have a strong science background. I have a Masters of Clinical Research, and a PhD in Molecular and 
+    Medical Genetics from OHSU. My professional area of research expertise is genetics and clinical research 
+    (epidemiology). However, I enjoy keeping up with and writing about an array of technical and scientific 
+    topics – I love learning new things!
+  </p>
 
-Where I am:
-In 2011, I traded the Oregon rain for the sunshine of the Silicon Valley to take a Postdoc position at Stanford. However, I have since left academia to seek my fortunes elsewhere. I am now a freelance writer, biology instructor, and communications tutor. I am passionate about research, science education, and academic reform. 
+  <p>
+    I have a strong communication background. As a graduate student I won numerous awards for my 
+    scientific talks. After completing my dissertation, I became an Oral Communications tutor at Stanford 
+    University. There I helped a wide-variety of graduate students and post-docs communicate their 
+    science. This work strengthened my own communication skills, made me realize how much I enjoy 
+    communicating science, and inspired me to pursue my current profession as a writer/editor.
+  </p>
 
+  <p>
+    I have worked as a featured author for BitesizeBio. And currently, I work as an Editor for two of 
+    BitesizeBio’s technical channels: their Protein Analysis, Detection & Assay channel, and their Microscopy 
+    & Imaging channel. There I am in charge of recruiting, training, scheduling, and managing a small team 
+    of writers and their content. 
+  </p>
 
-Where I am going:
-I am continually working to develop my writing and communications skills, while staying loyal to my first love -- science. I am learning how to network, and love the online science communities I have found, such as those at BitesizeBio. Please find me on my blog, Twitter, LinkedIn, or Facebook. I love making new science friends
-
-
-Interesting non-science things about me:
-Awarded public speaker
-Married to my high school sweetheart
-Marathon runner
-Avid knitter
-Mom
+  <p>
+    My passion is delivering highly-technical material in an accurate, but friendly and easy-to-follow 
+    manner. Don’t hesitate to contact me if you have any writing/editing or tutoring needs. Be sure to 
+    follow me on twitter, check out my linkedin, and like my facebook page.
+  </p>
 </div>
 <div id="articles_col">
   <% if @featured_articles.present? %>
     <h2>Featured Work</h2>
-    <ul>
-      <% @featured_articles.each do |article| %>
-        <li class="featured_article">
-          <%= article.short_title %>
-        </li>
-      <% end %>
-    </ul>
+    <div id="featured_articles" data-url="<%= featured_articles_url %>.json"></div>
   <% end %>
 </div>
 <%= link_to "Science Articles", science_articles_path %>

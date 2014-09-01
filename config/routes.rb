@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "home/index"
   get "/science-articles", to: 'science_articles#index'
   get "/social-articles", to: 'social_articles#index'
+  get "/featured-articles", to: 'featured_articles#index'
 
   root to: "home#index"
 
