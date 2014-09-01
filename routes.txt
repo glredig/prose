@@ -14,11 +14,12 @@ cancel_user_registration GET    /users/cancel(.:format)        devise/registrati
                          PATCH  /users(.:format)               devise/registrations#update
                          PUT    /users(.:format)               devise/registrations#update
                          DELETE /users(.:format)               devise/registrations#destroy
-              home_index GET    /home/index(.:format)          home#index
+                         GET    /                              static_pages#home
+                 hire_me GET    /hire-me(.:format)             static_pages#hire
         science_articles GET    /science-articles(.:format)    science_articles#index
          social_articles GET    /social-articles(.:format)     social_articles#index
        featured_articles GET    /featured-articles(.:format)   featured_articles#index
-                    root GET    /                              home#index
+                    root GET    /                              static_pages#home
                 articles GET    /articles(.:format)            articles#index
                          POST   /articles(.:format)            articles#create
              new_article GET    /articles/new(.:format)        articles#new

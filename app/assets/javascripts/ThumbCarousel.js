@@ -78,6 +78,24 @@ var ThumbCarousel = (function() {
           clear.className = 'clear';
           this.node.appendChild(clear);
         }
+
+        if (i == 3) {
+          thumb = new Thumb({
+            url: 'http://bitesizebio.s3.amazonaws.com/wp-content/uploads/2014/02/bitesizebio-250.png',
+            link: 'http://bitesizebio.com/category/technical-channels/microscopy-imaging/',
+            short_title: 'Editor: Microscopy & Imaging',
+            title: 'Editor: Microscopy & Imaging',
+            parent: this,
+            orientation: 'above' 
+          });
+
+          thumb.init();
+          this.thumbs.push(thumb);
+
+          clear = document.createElement('div');
+          clear.className = 'clear';
+          this.node.appendChild(clear);
+        }
       }
     }, 
 

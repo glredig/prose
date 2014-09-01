@@ -1,4 +1,6 @@
-<h1>Home</h1>
+<div id="home_banner">
+  <span>Something awesome!</span>
+</div>  
 
 <div id="bio">
   <h2>Jennifer Redig, MCR, PhD</h2>
@@ -37,6 +39,25 @@
   <% if @featured_articles.present? %>
     <h2>Featured Work</h2>
     <div id="featured_articles" data-url="<%= featured_articles_url %>.json"></div>
+  <% end %>
+
+  <% if @science_articles.present? %>
+    <h2>Technical Clips</h2>
+    <p>
+      As a former bench scientist I really enjoy writing on highly technical
+      topics. I love the challenge of accurately communicating technical information in a 
+      compelling and entertaining manner.
+    </p>
+    <%= link_to "View Work", science_articles_path %>
+  <% end %>
+
+  <% if @social_articles.present? %>
+    <h2>General Clips</h2>
+    <p>
+      One of the benefits of having left research is that I have more time to
+      read and write about a wider variety of topics. Here you can find my “non-technical” clips.
+    </p>
+    <%= link_to "View Work", social_articles_path %>
   <% end %>
 </div>
 <%= link_to "Science Articles", science_articles_path %>

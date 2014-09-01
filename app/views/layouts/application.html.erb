@@ -6,11 +6,22 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <section id="top_nav">
-  <%= link_to "Home", root_path %>
+  <div id="centered_nav">
+    <%= link_to "home", root_path %>
+    <ul>
+      <li>
+        <%= link_to "articles", articles_path %>
+      </li>
+      <li>
+        <%= link_to "hire me", hire_me_path %>
+      </li>
+    </ul>
+  </div>
 </section>
 <section id="content">
   <%= yield %>
