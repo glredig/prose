@@ -1,33 +1,53 @@
 section#top_nav {
-  position: fixed;
-  top: 0;
-  height: 3em;
+  height: 13em;
   width: 100%;
-  z-index: 100;
-  background-color: #333;
 
-  ul {
-    float: right;
+  #banner {
+    max-width: 1140px;
+    margin: 0 auto;
+    background-image: image-url("prose_banner.png");
+    height: 155px;
 
-    li {
-      display: inline-block;
+    a.logo_link {
+      float: left;
+      height: 10em;
+      width: 350px;
+      display: block;
+      background-image: image-url("logo.png");
     }
   }
 
-  a {
+  #centered_nav {
+    max-width: 1140px;
+    margin: 0 auto;
+    border-top: 3px solid #555;
+    border-bottom: 1px solid #555;
+    height: 3em;
+
+    ul {
+    float: right;
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    a {
       display: inline-block;
       padding: 0 2em;
       text-decoration: none;
-      color: #fafafa;
+      color: #c80000;
       font-family: 'Roboto', sans-serif;
-      font-weight: 300;
+      font-weight: 700;
       font-variant: small-caps;
       font-size: 1.2em;
       line-height: 2.5em;
       border-left: 1px solid #555;
 
       &:hover {
-        background-color: #555;
+        color: #555;
+        text-decoration: underline;
       }
+    }
   }
 }

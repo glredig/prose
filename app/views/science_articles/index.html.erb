@@ -1,9 +1,11 @@
 <h1>Science Articles</h1>
 
-<% @articles.each do |article| %>
-  <%= article.title %><br>
-  <%= article.short_title %><br>
-  <%= article.featured %><br>
-  <%= article.link %><br>
-  <%= image_tag article.article_image.url %>
-<% end %>
+<p>
+  As a former bench scientist I really enjoy writing on highly technical
+  topics. I love the challenge of accurately communicating technical information in a 
+  compelling and entertaining manner.
+</p>
+
+<ul>
+  <%= render partial: "layouts/article", collection: @articles %>
+</ul>

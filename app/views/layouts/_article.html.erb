@@ -1,0 +1,13 @@
+<li class="article">
+  <div class="left_box">
+    <%= image_tag article.article_image.thumb.url %>
+  </div>
+  <div class="right_box">
+    <%= link_to article.title, article.link, class: "title_link" %><br>
+    <p>
+      <%= article.content %>
+    </p>
+    <%= link_to "Read more...", article.link, class: "read_more_link" %>
+  </div>
+  <div class="clear"></div>
+</li>

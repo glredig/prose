@@ -10,24 +10,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<section id="top_nav">
-  <div id="centered_nav">
-    <%= link_to "home", root_path %>
-    <ul>
-      <li>
-        <%= link_to "articles", articles_path %>
-      </li>
-      <li>
-        <%= link_to "hire me", hire_me_path %>
-      </li>
-    </ul>
-  </div>
-</section>
-<section id="content">
-  <%= yield %>
-</section>
-<section id="footer">
-</section>
+<div id="wrapper">
+  <section id="top_nav">
+    <div id="banner">
+      <%= link_to "", root_path, class: "logo_link" %>
+    </div>
+    <div id="centered_nav">
+      <ul>
+        <li>
+          <%= link_to "articles", articles_path %>
+        </li>
+        <li>
+          <%= link_to "hire me", hire_me_path %>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="content">
+    <%= yield %>
+  </section>
+</div>
 
 </body>
 </html>

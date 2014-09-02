@@ -1,19 +1,35 @@
 #home_banner {
-  height: 400px;
+  height: 150px;
+  margin: 5em auto;
   text-align: center;
-  
+  background-image: image-url('prose_banner.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 250px;
+
   span {
-    font-size: 4em;
+    font-size: 2em;
   }
 }
 
 #bio {
   float: left;
-  width: 30%;
-  margin-right: 5%;
+  width: 35%;
+  margin-right: 3%;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  padding: 1em;
+
+  .bio_pic {
+    display: block;
+    width: 60%;
+    border-radius: 50%;
+    border: 1px solid #999;
+    margin: 0 auto;
+  }
 }
 
 #articles_col {
   float: right;
-  width: 65%;
+  width: 58%;
 }

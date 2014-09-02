@@ -1,65 +1,70 @@
-<div id="home_banner">
-  <span>Something awesome!</span>
-</div>  
+<div id="content">
+  <div id="bio">
+    <%= image_tag "headshot_color.png", class: "bio_pic" %>
+    <h2>Jennifer Redig, MCR, PhD</h2>
 
-<div id="bio">
-  <h2>Jennifer Redig, MCR, PhD</h2>
+    <h4>Molecular Biologist Turned Writer</h4>
 
-  <h4>Molecular Biologists Turned Writer</h4>
-
-  <p>
-    I have a strong science background. I have a Masters of Clinical Research, and a PhD in Molecular and 
-    Medical Genetics from OHSU. My professional area of research expertise is genetics and clinical research 
-    (epidemiology). However, I enjoy keeping up with and writing about an array of technical and scientific 
-    topics – I love learning new things!
-  </p>
-
-  <p>
-    I have a strong communication background. As a graduate student I won numerous awards for my 
-    scientific talks. After completing my dissertation, I became an Oral Communications tutor at Stanford 
-    University. There I helped a wide-variety of graduate students and post-docs communicate their 
-    science. This work strengthened my own communication skills, made me realize how much I enjoy 
-    communicating science, and inspired me to pursue my current profession as a writer/editor.
-  </p>
-
-  <p>
-    I have worked as a featured author for BitesizeBio. And currently, I work as an Editor for two of 
-    BitesizeBio’s technical channels: their Protein Analysis, Detection & Assay channel, and their Microscopy 
-    & Imaging channel. There I am in charge of recruiting, training, scheduling, and managing a small team 
-    of writers and their content. 
-  </p>
-
-  <p>
-    My passion is delivering highly-technical material in an accurate, but friendly and easy-to-follow 
-    manner. Don’t hesitate to contact me if you have any writing/editing or tutoring needs. Be sure to 
-    follow me on twitter, check out my linkedin, and like my facebook page.
-  </p>
-</div>
-<div id="articles_col">
-  <% if @featured_articles.present? %>
-    <h2>Featured Work</h2>
-    <div id="featured_articles" data-url="<%= featured_articles_url %>.json"></div>
-  <% end %>
-
-  <% if @science_articles.present? %>
-    <h2>Technical Clips</h2>
     <p>
-      As a former bench scientist I really enjoy writing on highly technical
-      topics. I love the challenge of accurately communicating technical information in a 
-      compelling and entertaining manner.
+      I have a strong science background. I have a Masters of Clinical Research, and a PhD in Molecular and 
+      Medical Genetics from OHSU. My professional area of research expertise is genetics and clinical research 
+      (epidemiology). However, I enjoy keeping up with and writing about an array of technical and scientific 
+      topics – I love learning new things!
     </p>
-    <%= link_to "View Work", science_articles_path %>
-  <% end %>
 
-  <% if @social_articles.present? %>
-    <h2>General Clips</h2>
     <p>
-      One of the benefits of having left research is that I have more time to
-      read and write about a wider variety of topics. Here you can find my “non-technical” clips.
+      I have a strong communication background. As a graduate student I won numerous awards for my 
+      scientific talks. After completing my dissertation, I became an Oral Communications tutor at Stanford 
+      University. There I helped a wide-variety of graduate students and post-docs communicate their 
+      science. This work strengthened my own communication skills, made me realize how much I enjoy 
+      communicating science, and inspired me to pursue my current profession as a writer/editor.
     </p>
-    <%= link_to "View Work", social_articles_path %>
-  <% end %>
+
+    <p>
+      I have worked as a featured author for BitesizeBio. And currently, I work as an Editor for two of 
+      BitesizeBio’s technical channels: their Protein Analysis, Detection & Assay channel, and their Microscopy 
+      & Imaging channel. There I am in charge of recruiting, training, scheduling, and managing a small team 
+      of writers and their content. 
+    </p>
+
+    <p>
+      My passion is delivering highly-technical material in an accurate, but friendly and easy-to-follow 
+      manner. Don’t hesitate to contact me if you have any writing/editing or tutoring needs. Be sure to 
+      follow me on twitter, check out my linkedin, and like my facebook page.
+    </p>
+  </div>
+  <div id="articles_col">
+    <% if @featured_articles.present? %>
+      <h2>Featured Work</h2>
+      <div id="featured_articles" data-url="<%= featured_articles_url %>.json"></div>
+    <% end %>
+    <br><br>
+    <% if @science_articles.present? %>
+      <% latest_science = @science_articles.last %>
+      <h2>Latest Technical Clip</h2>
+      <ul>
+        <%= render partial: "layouts/article", locals: { article: latest_science } %>
+      </ul>
+      <%= link_to "View all", science_articles_path %>
+    <% end %>
+
+    <% if @social_articles.present? %>
+      <% latest_general = @social_articles.last %>
+      <h2>Latest General Clips</h2>
+      <ul>
+        <li class="article">
+          <%= image_tag latest_general.article_image.thumb.url %>
+          <div>
+            <%= latest_general.title %><br>
+            <%= latest_general.content %><br>
+          </div>
+          <div class="clear"></div>
+        </li>
+      </ul>
+      <%= link_to "View Work", social_articles_path %>
+    <% end %>
+  </div>
+  <%= link_to "Science Articles", science_articles_path %>
+  <%= link_to "Social Articles", social_articles_path %>
+  <%= link_to "New Article", new_article_path %>
 </div>
-<%= link_to "Science Articles", science_articles_path %>
-<%= link_to "Social Articles", social_articles_path %>
-<%= link_to "New Article", new_article_path %>
