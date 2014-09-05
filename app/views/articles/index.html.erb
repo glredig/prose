@@ -1,12 +1,8 @@
 <h1>Articles</h1>
+<% if user_signed_in? %>
+  <%= link_to "Add new article", new_article_path %>
+<% end %>
 
 <% @articles.each do |article| %>
-  <%= article.title %><br>
-  <%= article.short_title %><br>
-  <%= article.featured %><br>
-  <%= Article::CATEGORIES[article.category] %><br>
-  <%= article.link %><br>
-  <%= article.content %><br>
-  <%= image_tag article.article_image.thumb %>
-
+  <%= render partial: "layouts/article", locals: { article: article } %>
 <% end %>

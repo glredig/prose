@@ -49,17 +49,29 @@ li {
 }
 
 #content {
-  margin: 5em auto;
+  margin: 0 auto 3em;
+  background-color: #eee;
+  padding: .5em;
+}
+
+.pos_fr {
+  float: right;
 }
 
 .clear {
   clear: both;
 }
 
+.card {
+  padding: 1em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
 .article {
   border: 1px solid #ccc;
   padding: 1em;
-  width: 615px;
+  max-width: 615px;
 
   .left_box {
     float: left;
@@ -69,7 +81,7 @@ li {
 
   .right_box {
     float: left;
-    width: 500px;
+    max-width: 450px;
 
     a.title_link {
       font-size: 1.5em;

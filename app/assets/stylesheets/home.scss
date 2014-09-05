@@ -17,15 +17,16 @@
   width: 35%;
   margin-right: 3%;
   border: 1px solid #ddd;
-  background-color: #fafafa;
+  background-color: #fefefe;
   padding: 1em;
 
   .bio_pic {
     display: block;
-    width: 60%;
-    border-radius: 50%;
+    float: left;
+    width: 40%;
+    // border-radius: 50%;
     border: 1px solid #999;
-    margin: 0 auto;
+    margin-right: 1em;
   }
 }
 

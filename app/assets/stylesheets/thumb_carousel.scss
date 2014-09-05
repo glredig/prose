@@ -4,6 +4,8 @@
   width: 180px;
   height: 180px;
   float: left;
+  margin-right: 5px;
+  margin-top: 5px;
 
   .thumb_title_div {
     color: #fff;
@@ -32,4 +34,8 @@
   img {
     max-width: 180px;
   }
+}
+
+#featured_articles {
+  margin: 0 auto;
 }

@@ -1,10 +1,10 @@
 <%= simple_form_for @article, html: { multipart: true } do |f| %>
   <%= f.input :title %>
   <%= f.input :short_title %>
-  <%= f.input :content %>
+  <%= f.input :content, as: :text %>
   <%= f.input :featured, as: :boolean %>
   <%= f.input :link %>
-  <%= f.input :category, collection: Article::CATEGORIES, include_blank: false %>
+  <%= f.input :category, collection: 0..1, label_method: ->(obj){Article::CATEGORIES[obj]},include_blank: false %>
   <%= f.file_field :article_image %>
 
   <%= f.button :submit %>
