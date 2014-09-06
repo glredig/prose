@@ -24,14 +24,6 @@ section#top_nav {
     border-bottom: 1px solid #555;
     height: 3em;
 
-    ul {
-    float: right;
-
-      li {
-        display: inline-block;
-      }
-    }
-
     a {
       display: inline-block;
       padding: 0 2em;
@@ -47,6 +39,48 @@ section#top_nav {
       &:hover {
         color: #555;
         text-decoration: underline;
+      }
+    }
+
+    & > ul {
+    float: right;
+
+      & > li {
+        display: inline-block;
+        position: relative;
+
+        i {
+          font-size: 1em;
+          margin-left: 10px;
+        }
+
+        ul {
+          display: none;
+          position: absolute;
+          width: 220px;
+          background-color: #fff;
+          border: 1px solid #999;
+          z-index: 1000;
+
+          li {
+            a {
+              display: block;
+              border-left: none;
+            }
+          }
+        }
+      }
+
+      & > li:hover {
+        ul {
+          display: block;
+
+          li {
+            a:hover {
+              background-color: #eee;
+            }
+          }
+        }
       }
     }
   }

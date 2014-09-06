@@ -1,0 +1,18 @@
+label {
+  width: 100px;
+  margin-top: 1em;
+  display: inline-block;
+
+  &.boolean {
+    margin-left: 10px;
+  }
+}
+
+input:not(.button):not(.boolean) {
+  width: 400px;
+}
+
+textarea {
+  width: 400px;
+  margin-top: 1em;
+}

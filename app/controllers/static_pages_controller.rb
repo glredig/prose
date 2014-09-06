@@ -7,4 +7,7 @@ class StaticPagesController < ApplicationController
 
   def hire
   end
+
+  def academic_papers
+  end
 end

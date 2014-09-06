@@ -59,7 +59,7 @@
     <% if @social_articles.present? %>
       <% latest_general = @social_articles.last %>
       <div class="card">
-        <h2>Latest General Clips</h2>
+        <h2>Latest General Clip</h2>
         <ul>
           <%= render partial: "layouts/article", locals: { article: latest_general } %>
         </ul>
@@ -68,8 +68,5 @@
       </div>
     <% end %>
   </div>
-  <%= link_to "Science Articles", science_articles_path %>
-  <%= link_to "Social Articles", social_articles_path %>
-  <%= link_to "New Article", new_article_path %>
   <div class="clear"></div>
 </div>

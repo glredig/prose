@@ -7,6 +7,7 @@
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,7 +19,14 @@
     <div id="centered_nav">
       <ul>
         <li>
-          <%= link_to "articles", articles_path %>
+          <%= link_to articles_path do %> 
+            articles <i class="fa fa-angle-down"></i>
+          <% end %>
+          <ul>
+            <li><%= link_to "technical clips", science_articles_path%></li>
+            <li><%= link_to "general clips", social_articles_path%></li>
+            <li><%= link_to "academic publications", academic_papers_path%></li>
+          </ul>
         </li>
         <li>
           <%= link_to "hire me", hire_me_path %>

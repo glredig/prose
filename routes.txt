@@ -19,6 +19,7 @@ cancel_user_registration GET    /users/cancel(.:format)        devise/registrati
         science_articles GET    /science-articles(.:format)    science_articles#index
          social_articles GET    /social-articles(.:format)     social_articles#index
        featured_articles GET    /featured-articles(.:format)   featured_articles#index
+         academic_papers GET    /academic-papers(.:format)     static_pages#academic_papers
                     root GET    /                              static_pages#home
                 articles GET    /articles(.:format)            articles#index
                          POST   /articles(.:format)            articles#create
